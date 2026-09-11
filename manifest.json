@@ -1,0 +1,22 @@
+{
+  "name": "김아린의 발자국",
+  "short_name": "아린",
+  "description": "김아린의 성장 앨범",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5FBF7",
+  "theme_color": "#8FCBB4",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
