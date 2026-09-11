@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>김아린의 발자국</title>
-<meta name="theme-color" content="#8FCBB4">
+<title>김아린 성공기</title>
+<meta name="theme-color" content="#F5CB5D">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-icon.png">
 <style>
 :root{
-  --cream:#F5FBF7; --cream2:#E8F5EE; --pink:#7FC4A6; --pink-d:#3D8B6B;
-  --ink:#2F4438; --sub:#7E9687; --white:#fff; --line:#D4E9DD;
+  --cream:#FFFAEB; --cream2:#FDF2CE; --pink:#F2C14E; --pink-d:#A87A0E;
+  --ink:#4A3B14; --sub:#A18F5F; --white:#fff; --line:#EFE2B6;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Malgun Gothic',sans-serif;color:var(--ink)}
 html,body{max-width:100vw;overflow-x:hidden}
 body{background:var(--cream);padding-bottom:90px;-webkit-tap-highlight-color:transparent}
 /* ── 게이트 ── */
-#gate{position:fixed;inset:0;background:linear-gradient(160deg,#EFF9F4,#D2EEDF);display:flex;align-items:center;justify-content:center;z-index:100;padding:24px}
-#gate .box{background:var(--white);border-radius:24px;padding:36px 30px;max-width:340px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(70,140,105,.15)}
+#gate{position:fixed;inset:0;background:linear-gradient(160deg,#FFF6DE,#FBEFC7);display:flex;align-items:center;justify-content:center;z-index:100;padding:24px}
+#gate .box{background:var(--white);border-radius:24px;padding:36px 30px;max-width:340px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(200,150,30,.18)}
 #gate h1{font-size:21px;color:var(--pink-d)}
 #gate .sub{font-size:13px;color:var(--sub);margin:8px 0 22px}
 #gate input{width:100%;padding:14px;border:2px solid var(--line);border-radius:14px;font-size:16px;text-align:center;letter-spacing:2px}
 #gate button{width:100%;margin-top:12px;padding:14px;background:var(--pink);color:#fff;border:none;border-radius:14px;font-size:15px;font-weight:bold}
 #gate .err{color:var(--pink-d);font-size:12px;margin-top:10px;display:none}
 /* ── 헤더 ── */
-header{background:linear-gradient(150deg,#D2EEDF,#EFF9F4);padding:22px 20px 18px;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
+header{background:linear-gradient(150deg,#FBEFC7,#FFF6DE);padding:22px 20px 18px;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
 .h-row{display:flex;align-items:center;justify-content:space-between}
 h1.logo{font-size:18px;color:var(--pink-d)}
 .dday-box{text-align:right}
@@ -61,7 +61,7 @@ nav button.on{color:var(--pink-d)}
 textarea{width:100%;min-height:80px;border:2px solid var(--line);border-radius:14px;padding:12px;font-size:14px;resize:vertical;background:#FFFEFB}
 input[type=date]{width:100%;padding:12px;border:2px solid var(--line);border-radius:14px;font-size:14px;background:#FFFEFB}
 .submit-btn{width:100%;margin-top:18px;padding:15px;background:var(--pink);color:#fff;border:none;border-radius:16px;font-size:15px;font-weight:bold}
-.submit-btn:disabled{background:#BFDCCF}
+.submit-btn:disabled{background:#E9D89E}
 /* ── 일기 ── */
 .diary-item{background:var(--white);border-radius:16px;padding:16px;border:1px solid var(--line);margin-bottom:12px}
 .diary-item .d{font-size:11px;color:var(--sub);display:flex;justify-content:space-between}
@@ -83,7 +83,7 @@ input[type=date]{width:100%;padding:12px;border:2px solid var(--line);border-rad
 .toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 22px;border-radius:24px;font-size:13.5px;z-index:200;opacity:0;transition:opacity .3s;white-space:nowrap}
 .toast.show{opacity:.95}
 /* ── 날짜 팝업 ── */
-#dayModal{position:fixed;inset:0;background:rgba(35,55,45,.55);z-index:150;display:none;align-items:flex-end;justify-content:center}
+#dayModal{position:fixed;inset:0;background:rgba(75,59,10,.55);z-index:150;display:none;align-items:flex-end;justify-content:center}
 #dayModal.show{display:flex}
 #dayModal .sheet{background:var(--white);border-radius:24px 24px 0 0;width:100%;max-width:640px;max-height:82vh;overflow-y:auto;padding:20px 18px 34px;animation:up .25s ease}
 @keyframes up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
@@ -98,8 +98,8 @@ input[type=date]{width:100%;padding:12px;border:2px solid var(--line);border-rad
 #dayModal .m-empty{text-align:center;color:var(--sub);font-size:13px;padding:30px 0;line-height:1.7}
 #dayModal .share-btn{width:100%;margin-top:8px;padding:13px;background:var(--pink);color:#fff;border:none;border-radius:14px;font-size:14px;font-weight:bold}
 /* ── 삭제 버튼 ── */
-.del-btn{width:100%;border:none;border-top:1px solid var(--line);background:var(--white);color:#5B8F76;font-size:11.5px;font-weight:bold;padding:8px;cursor:pointer}
-.diary-item .del-btn{width:auto;border:none;background:var(--cream2);border-radius:8px;padding:4px 10px;margin-top:8px;font-size:11px;color:#5B8F76;font-weight:bold}
+.del-btn{width:100%;border:none;border-top:1px solid var(--line);background:var(--white);color:#B08A2E;font-size:11.5px;font-weight:bold;padding:8px;cursor:pointer}
+.diary-item .del-btn{width:auto;border:none;background:var(--cream2);border-radius:8px;padding:4px 10px;margin-top:8px;font-size:11px;color:#B08A2E;font-weight:bold}
 
 /* ── 카드 공유/플레이 버튼 ── */
 .media-wrap{position:relative}
@@ -113,8 +113,8 @@ input[type=date]{width:100%;padding:12px;border:2px solid var(--line);border-rad
 <!-- ══ 비밀번호 게이트 ══ -->
 <div id="gate">
   <div class="box">
-    <div style="font-size:44px">👣</div>
-    <h1>김아린의 발자국</h1>
+    <div style="font-size:44px">🏆</div>
+    <h1>김아린 성공기</h1>
     <div class="sub">우리 가족만의 성장 앨범</div>
     <input type="password" id="pwInput" placeholder="가족 비밀번호" autocomplete="off">
     <button onclick="doLogin()">들어가기</button>
@@ -124,7 +124,7 @@ input[type=date]{width:100%;padding:12px;border:2px solid var(--line);border-rad
 
 <header>
   <div class="h-row">
-    <h1 class="logo">👣 김아린의 발자국</h1>
+    <h1 class="logo">🏆 김아린 성공기</h1>
     <div class="dday-box">
       <div class="dday-num" id="ddayNum">D-day</div>
       <div class="dday-lab" id="ddayLab">2026.09.15 출생 예정</div>
@@ -218,11 +218,11 @@ function dday(){
   if (diff < 0) {
     el.textContent = 'D-' + Math.abs(diff);  // D-5
     document.getElementById('ddayLab').textContent = '2025.04.07 우리 만난 날';
-    document.getElementById('welcomeMsg').innerHTML = '아린을 만나기까지 <b>' + Math.abs(diff) + '일</b> 남았어요. 🍼<br>첫 발자국부터 지금까지, 오늘도 기록해요.';
+    document.getElementById('welcomeMsg').innerHTML = '아린을 만나기까지 <b>' + Math.abs(diff) + '일</b> 남았어요. 🍼<br>태어난 날부터 오늘까지, 아린이의 성공기를 기록해요.';
   } else {
     el.textContent = 'D+' + diff;
     document.getElementById('ddayLab').textContent = '2025.04.07 우리 만난 날';
-    document.getElementById('welcomeMsg').innerHTML = '아린랑 <b>' + (diff + 1) + '일</b> 💗<br>오늘도 김아린의 발자국를 기록해요.';
+    document.getElementById('welcomeMsg').innerHTML = '아린이랑 <b>' + (diff + 1) + '일</b> 💗<br>오늘도 김아린 성공기를 기록해요.';
   }
 }
 
@@ -516,12 +516,12 @@ async function shareItem(idx){
     const ext = p.kind === 'video' ? 'mp4' : 'jpg';
     const file = new File([blob], 'melbourny.' + ext, {type: blob.type});
     if (navigator.canShare && navigator.canShare({files: [file]})) {
-      await navigator.share({files: [file], text: label + ' — 김아린의 발자국 👣'});
+      await navigator.share({files: [file], text: label + ' — 김아린 성공기 🏆'});
       return;
     }
   } catch (e) { /* 파일 공유 실패 시 텍스트로 */ }
   try {
-    if (navigator.share) { await navigator.share({title: '김아린의 발자국 👣', text: label}); }
+    if (navigator.share) { await navigator.share({title: '김아린 성공기 🏆', text: label}); }
     else { await navigator.clipboard.writeText(label); toast('복사했어요 — 카톡에 붙여넣기 하세요 💗'); }
   } catch (e) {}
 }

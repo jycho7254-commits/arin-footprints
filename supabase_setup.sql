@@ -1,4 +1,4 @@
--- ═══ 김아린의 발자국 — Supabase 테이블 ═══
+-- ═══ 김아린 성공기 — Supabase 테이블 ═══
 -- 실행: SQL Editor → 한 줄씩 (붙여넣기 깨짐 방지)
 
 create table if not exists arin_photos (id bigint generated always as identity primary key, created_at timestamptz default now(), photo_date date not null, memo text, image_data text not null);
